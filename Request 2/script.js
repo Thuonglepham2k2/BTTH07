@@ -155,3 +155,17 @@ $(document).ready(function(){
         }
     })
 })
+$(document).ready(function(){
+    $("#btnSubmit").click(function(){
+        var Country = $("#selectCountry :selected");
+        if(Country.val() === "")
+        {
+            document.getElementById("statusOfCountry").innerHTML="Vui lòng chọn quốc gia";
+            document.getElementById("statusOfCountry").style.color="red";
+        }
+        else{
+            document.getElementById("statusOfCountry").innerHTML="Quốc gia: "+Country.val()+"";
+            document.getElementById("statusOfCountry").style.color="Blue";
+        }
+})
+})
