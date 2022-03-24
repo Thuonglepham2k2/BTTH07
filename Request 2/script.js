@@ -169,3 +169,54 @@ $(document).ready(function(){
         }
 })
 })
+    $(document).ready(function(){
+        $("#btnSubmit").click(function(){
+        if($.isNumeric( $('#txtZip').val()))
+         {
+        $('#statusOfZip').html('Value is Numeric');
+        $('#statusOfZip').css('color','blue');
+
+         }
+        else
+         {
+        $('#statusOfZip').html('Value is not Numeric');
+        $('#statusOfZip').css('color','red');
+         }
+        });
+        });
+        $(document).ready(function(){
+            function checkEmail(){
+                let email = $('#txtEmail').val();
+                let emailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if(emailRegex.test(email)){
+                    return true
+                }
+                return false
+            }
+            $("#btnSubmit").click(function(e){
+                e.preventDefault();
+                if(checkEmail()){
+                    $("#statusOfEmail").text('Email hợp lệ')
+                    $("#statusOfEmail").css('color','blue')
+                }else{
+                    $("#statusOfEmail").text('Email không hợp lệ')
+                    $("#statusOfEmail").css('color','red')
+                }
+            })
+        })
+        $(document).ready(function(){
+            $("input[type='submit']").click(function(){
+                var radioValue = $("input[name='gender']:checked").val();
+                if(radioValue){
+                    $('#statusOfSex').html('Giới tính:'+ radioValue);
+                    $('#statusOfSex').css('color','blue');
+                    $('#statusOfSex').css('margin-left','50px');
+                }
+                else{
+                    $('#statusOfSex').html("Vui lòng chọn giới tính");
+                    $('#statusOfSex').css('color','red');
+                    $('#statusOfSex').css('margin-left','50px');
+                    
+                }
+            });
+        });
