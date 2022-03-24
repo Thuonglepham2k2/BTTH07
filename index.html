@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Registration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Chia để trị: -->
@@ -12,43 +13,34 @@
     <!-- 2, Chia nhỏ vấn đề cần xử lý: 10 vấn đề > 2 vấn đề đầu tiên trước -->
 
     <form action="">
+        <h1>Registration Form</h1>
         <div class="row">
-            <div class="col">
-                User ID:
-            </div>
-            <div class="col">
-                <input type="text" name="txtUserID" id="txtUserID" required>
+            <div class="col"> User ID:
+                
+                <input type="text" style="margin-left: 15px;"  name="txtUserID" size="12" id="txtUserID" required>
                 <span id="statusOfUserID"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                Password:
-            </div>
-            <div class="col">
-                <input type="password" name="txtPassword" id="txtPassword">
+            <div class="col">Password:
+                <input type="password" style="margin-left: 5px;" name="txtPassword" size="12" id="txtPassword">
                 <span id="statusOfPassword"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                Name:
-            </div>
-            <div class="col">
-                <input type="text" name="txtName" id="txtName" required>
+            <div class="col">Name:
+                <input type="text" style="margin-left: 30px;" name="txtName" size="30" id="txtName" required>
                 <span id="statusOfName"></span>
             </div>
         </div>
-
         <div class="row">
-            <div class="col">
-                Address:
-            </div>
-            <div class="col">
-                <input type="text" name="txtAddress" id="txtAddress" required>
+
+            <div class="col"> Address:
+                <input type="text"style="margin-left: 15px;"  name="txtAddress" size="30" id="txtAddress" required>
                 <span id="statusOfAddress"></span>
             </div>
         </div>
+       
         <div class="row">
             <div class="col">
                 Country:
@@ -298,54 +290,44 @@
         </div>
         
         <div class="row">
-            <div class="col">
-                ZIP Code:
-            </div>
-            <div class="col">
-                <input type="text" name="txtZip" id="txtZip" required>
+
+            <div class="col"> ZIP Code:
+                <input type="text" style="margin-left: 8px;"  name="txtZip" id="txtZip" required>
                 <span id="statusOfZip"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                Email:
+
+            <div class="row">
+                <div class="col"> Email:
+                    <input type="text" style="margin-left: 30px;"  name="txtEmail" size="30" id="txtEmail" required>
+                    <span id="statusOfEmail"></span>
+                </div>
             </div>
-            <div class="col">
-                <input type="text" name="txtEmail" id="txtEmail" required>
-                <span id="statusOfEmail"></span>
+            <div class="row">
+
+                <div class="col"> Sex:
+                    <input type="radio" style="margin-left: 45px;" name="gender" value="male" required><span id="statusOfMale">Male</span>
+                    <input type="radio" style="margin-left: 45px;" name="gender" value="female" required><span id="statusOfFemale">Female</span>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                Sex:
-            </div>
-            <div class="col">
-                <input type="radio" name="gender" value="male" required><span id="statusOfMale">Male</span>
-                <input type="radio" name="gender" value="female" required><span id="statusOfFemale">Female</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                Language:
-            </div>
-            <div class="col">
+
+            <div class="row">
+                <div class="col">Language:
                 <input type="checkbox"  name="language" value="English" required><span id="statusOfEnglish">English</span>
                 <input type="checkbox"  name="language" value="Non English" required><span id="statusOfNonEnglish">Non English</span>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                About:
-            </div>
-            <div class="col">
-                <textarea name="desc" id="desc"></textarea>
+            <div class="col">About:
+                <textarea name="" style="margin-left: 30px;"  rows="10"  cols="45"></textarea>
             </div>
         </div>
                 <div class="row">
                     <div class="col">
               
             </div>
-            <div class="col">
+            <div class="col" style="text-align: center;">
                 <input type="submit" name="btnSubmit" id="btnSubmit" value="Submit">
             </div>
         </div>
