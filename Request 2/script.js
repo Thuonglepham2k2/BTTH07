@@ -86,6 +86,91 @@
 //         statusOfPassword.style.color = 'red'
 //     }
 // })
+//xác thực địa chỉ người dùng
+/* function alphanumeric(uadd)
+{ 
+var letters = /^[0-9a-zA-Z]+$/;
+if(uadd.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('User address must have alphanumeric characters only');
+uadd.focus();
+return false;
+}
+}
+ */
+//xác thực quốc gia
+/* function countryselect(ucountry)
+{
+if(ucountry.value == "Default")
+{
+alert('Select your country from the list');
+ucountry.focus();
+return false;
+}
+else
+{
+return true;
+}
+} */
+//xác thực mã ZIP
+/* function allnumeric(uzip)
+{ 
+var numbers = /^[0-9]+$/;
+if(uzip.value.match(numbers))
+{
+return true;
+}
+else
+{
+alert('ZIP code must have numeric characters only');
+uzip.focus();
+return false;
+}
+} */
+//xác thực định dạng email
+/* function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+} */
+//xác định giới tính
+/* function validsex(umsex,ufsex)
+{
+x=0;
+
+if(umsex.checked) 
+{
+x++;
+} if(ufsex.checked)
+{
+x++; 
+}
+if(x==0)
+{
+alert('Select Male/Female');
+umsex.focus();
+return false;
+}
+else
+{
+alert('Form Successfully Submitted');
+window.location.reload()
+return true;}
+}
+ */
 
 // Cách 03: Sử dụng thư viện jQuery
 // Cú pháp jQuery: $(SELECTOR).ACTION()
@@ -169,3 +254,58 @@ $(document).ready(function(){
         }
 })
 })
+    $(document).ready(function(){
+        $("#btnSubmit").click(function(){
+        if($.isNumeric( $('#txtZip').val()))
+         {
+        $('#statusOfZip').html('Value is Numeric');
+        $('#statusOfZip').css('color','blue');
+
+         }
+        else
+         {
+        $('#statusOfZip').html('Value is not Numeric');
+        $('#statusOfZip').css('color','red');
+         }
+        });
+        });
+        $(document).ready(function(){
+            function checkEmail(){
+                let email = $('#txtEmail').val();
+                let emailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if(emailRegex.test(email)){
+                    return true
+                }
+                return false
+            }
+            $("#btnSubmit").click(function(e){
+                e.preventDefault();
+                if(checkEmail()){
+                    $("#statusOfEmail").text('Email hợp lệ')
+                    $("#statusOfEmail").css('color','blue')
+                }else{
+                    $("#statusOfEmail").text('Email không hợp lệ')
+                    $("#statusOfEmail").css('color','red')
+                }
+            })
+        })
+        $(document).ready(function(){
+            $("input[type='submit']").click(function(){
+                var radioValue = $("input[name='gender']:checked").val();
+                if(radioValue){
+                    $('#statusOfSex').html('Giới tính:'+ radioValue);
+                    $('#statusOfSex').css('color','blue');
+                    $('#statusOfSex').css('margin-left','50px');
+                }
+                else{
+                    $('#statusOfSex').html("Vui lòng chọn giới tính");
+                    $('#statusOfSex').css('color','red');
+                    $('#statusOfSex').css('margin-left','50px');
+                    
+                }
+            });
+        });
+function newFunction() {
+    xác; thực; địa
+}
+
