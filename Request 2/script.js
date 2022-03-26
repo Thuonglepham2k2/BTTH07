@@ -173,17 +173,17 @@ $(document).ready(function(){
         $("#btnSubmit").click(function(){
         if($.isNumeric( $('#txtZip').val()))
          {
-        $('#statusOfZip').html('Value is Numeric');
+        $('#statusOfZip').html('ZIP Code hợp lệ');
         $('#statusOfZip').css('color','blue');
 
          }
         else
          {
-        $('#statusOfZip').html('Value is not Numeric');
+        $('#statusOfZip').html('ZIP Code không hợp lệ');
         $('#statusOfZip').css('color','red');
          }
-        });
-        });
+        })
+        })
         $(document).ready(function(){
             function checkEmail(){
                 let email = $('#txtEmail').val();
@@ -218,32 +218,32 @@ $(document).ready(function(){
                     $('#statusOfSex').css('margin-left','50px');
                     
                 }
-            });
-        });
+            })
+        })
         $(document).ready(function(){
             $("#btnSubmit").click(function(){
                 var checkbox = $("#cb1").prop('checked');
             //         if ($("input[type=checkbox]").prop(":checked")) {
                 if(checkbox){
                         $( "#cb2" ).prop( "disabled", true )
-                        $("#statusOfLanguage").text('Checkbox is checked')
+                        $("#statusOfLanguage").text('Checkbox đã được chọn')
                         $('#statusOfLanguage').css('color','blue')
                     }
                     else{
                         $( "#cb2" ).prop( "disabled", false )
  
-                        $("#statusOfLanguage").text('Please select checkbox')
+                        $("#statusOfLanguage").text('Vui lòng chọn checkbox')
                         $('#statusOfLanguage').css('color','red') 
                     }
                 var checkbox2 = $("#cb2").prop('checked');
                 if(checkbox2){
                     $( "#cb1" ).prop( "disabled", true )
-                    $("#statusOfLanguage").text('Checkbox is checked')
+                    $("#statusOfLanguage").text('Checkbox đã được chọn')
                     $('#statusOfLanguage').css('color','blue')
                     }
                 else{
                     $( "#cb1" ).prop( "disabled", false )
-                    $("#statusOfLanguage").text('Please select checkbox')
+                    $("#statusOfLanguage").text('Vui lòng chọn checkbox')
                     $('#statusOfLanguage').css('color','red') 
                     }
                 })
