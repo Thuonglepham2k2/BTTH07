@@ -57,6 +57,49 @@ function removeCountry(){
         statusOfCountry.style.fontSize='15'
     }
 }
+//check Sex
+
+let = document.getElementById('selectOfSex')
+let statusOfSex = document.getElementById('statusOfSex').addEventListener('forcus',function(){
+    this.style.border = '1px solid'
+
+})
+Sex.addEventListener('focusout',removeSex)
+
+function removeSex(){
+    if(Sex.value ==''){
+        statusOfSex.textContent='must selec a Sex'
+        statusOfSex.style.color='red'
+        statusOfSex.style.fontSize='15px'
+    }
+    else(Sex.value='Male'||Sex.value='Female'){
+        statusOfSex.textContent='Invalid'
+        statusOfSex.style.color='blue'
+        statusOfSex.style.fontSize='15'
+    }
+}
+//check Language
+
+let = document.getElementById('selectOfLanguage')
+let statusOfLanguage = document.getElementById('statusOfLanguage').addEventListener('forcus',function(){
+    this.style.border = '1px solid'
+
+})
+Sex.addEventListener('focusout',removeLanguage)
+
+function removeLanguage(){
+    if(Language.value ==''){
+        statusOfLanguage.textContent='must selec a Language'
+        statusOfLanguage.style.color='red'
+        statusOfLanguage.style.fontSize='15px'
+    }
+    else(Language.value='English'||Language.value='Non English'){
+        statusOfLanguage.textContent='Invalid'
+        statusOfLanguage.style.color='blue'
+        statusOfLanguage.style.fontSize='15'
+    }
+}
+//Check About
 
 //check Zipcode
 function checkZip() {
