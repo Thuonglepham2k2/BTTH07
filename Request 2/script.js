@@ -220,3 +220,49 @@ $(document).ready(function(){
                 }
             });
         });
+        $(document).ready(function(){
+            $("#btnSubmit").click(function(){
+                var checkbox = $("#cb1").prop('checked');
+            //         if ($("input[type=checkbox]").prop(":checked")) {
+                if(checkbox){
+                        $( "#cb2" ).prop( "disabled", true )
+                        $("#statusOfLanguage").text('Checkbox is checked')
+                        $('#statusOfLanguage').css('color','blue')
+                    }
+                    else{
+                        $( "#cb2" ).prop( "disabled", false )
+ 
+                        $("#statusOfLanguage").text('Please select checkbox')
+                        $('#statusOfLanguage').css('color','red') 
+                    }
+                var checkbox2 = $("#cb2").prop('checked');
+                if(checkbox2){
+                    $( "#cb1" ).prop( "disabled", true )
+                    $("#statusOfLanguage").text('Checkbox is checked')
+                    $('#statusOfLanguage').css('color','blue')
+                    }
+                else{
+                    $( "#cb1" ).prop( "disabled", false )
+                    $("#statusOfLanguage").text('Please select checkbox')
+                    $('#statusOfLanguage').css('color','red') 
+                    }
+                })
+            })
+    //         function check(){          
+    //             $('input[type="checkbox"]').prop("checked", true);
+    //             }
+    //         function uncheck(){          
+    //             $('input[type="checkbox"]').prop("checked", false);
+    //             }
+    //         $("#btnSubmit").click(function(e){
+    //             e.preventDefault();
+    //             if (check()){
+    //                 $("#statusOfLanguage").text('Checkbox is checked')
+    //                 $('#statusOfLanguage').css('color','blue')
+    //             }
+    //             else if (uncheck()){
+    //                 $("#statusOfLanguage").text('Please select checkbox')
+    //                 $('#statusOfLanguage').css('color','red')
+    //             }
+    //     })
+    // })
